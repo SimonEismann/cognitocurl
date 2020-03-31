@@ -54,7 +54,7 @@ const HandleNewPasswordRequired = async (cognitoUser: CognitoUser, username: str
 
 const GetTokenFromInput = async (poolData: any): Promise<string> => {
   const username = await cli.prompt("Username");
-  const password = await cli.prompt("Password", { type: "hide" });
+  const password = await cli.prompt("Password");
   const authenticationData = {
     Username: username,
     Password: password
